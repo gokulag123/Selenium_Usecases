@@ -1,0 +1,113 @@
+Login- Locators
+***********
+By.CSS_SELECTOR, "#username"
+By.CSS_SELECTOR, "#password"
+By.CSS_SELECTOR, "#Login"
+
+Sale-HomePage
+**************
+Lead Dropdown Element
+By.XPATH, "//one-app-nav-bar-item-root[@data-id='Lead']/one-app-nav-bar-item-dropdown"
+New Lead
+(By.XPATH,"//span[text()='New Lead']")
+New Lead Modal
+(By.CSS_SELECTOR, "[class='isModal inlinePanel oneRecordActionWrapper']")
+Salutation:
+(By.XPATH, "//span[text()='--None--']")
+(By.XPATH, "//lightning-base-combobox-item/span/span[text()='Mr.']")
+Firstname for lead
+By.XPATH, "//div/input[@placeholder='First Name']"
+Lastname for lead
+By.XPATH, "//div/input[@placeholder='Last Name']"
+Company for lead
+By.XPATH, "//input[@name='Company']"
+Save button
+By.XPATH, "//button[text()='Save']"
+
+Lead_Checks
+****************
+Name locator
+By.XPATH, "//lightning-formatted-name[@data-output-element-id='output-field']"
+Status
+By.XPATH,"//records-record-layout-item[@field-label='Lead Status']//lightning-formatted-text[@slot='outputField']"
+
+
+Converting Lead to account
+**************************
+Convert Button
+By.XPATH,"//div[@class='windowViewMode-normal oneContent active lafPageHost']//button[text()='Convert']"
+slecting create new account
+By.XPATH, "//span[normalize-space(text())='Create New Account']"
+Conver button
+By.XPATH, '//div[@class="modal-footer slds-modal__footer"]/span/button'
+closing lead convertion
+By.XPATH, "//button[@title='Close this window']
+
+Checking the converted account
+**************************
+Account name
+By.XPATH,"//lightning-formatted-text[@slot='primaryField']"
+
+
+New Account
+****************
+Account Dropdown
+By.XPATH,//one-app-nav-bar-item-root[@data-id ='Account']/one-app-nav-bar-item-dropdown
+New account
+By.XPATH, "//span[text()='New Account']"
+Account name in mOdal:
+ By.XPATH,"//div[@class='isModal inlinePanel oneRecordActionWrapper']//div/input[@class='slds-input' and @name='Name']"
+Savr
+By.XPATH, "//button[text()='Save']"
+Checking account
+Account name
+By.XPATH, "//lightning-formatted-text[@slot='primaryField']"
+
+Opportunity Creation
+******************
+oppdropdown
+(By.XPATH,"//one-app-nav-bar-item-root[@data-id='Opportunity']/one-app-nav-bar-item-dropdown")
+New Opportunity
+(By.XPATH, "//span[text()='New Opportunity']")
+Opportunity name
+(By.XPATH, "//div/input[@name='Name']")
+listbox of account
+(By.XPATH, "//input[@aria-haspopup='listbox']")
+list of accounts
+(By.XPATH, "//ul/li//lightning-base-combobox-formatted-text")
+Date Selection
+(By.XPATH, "//div/input[@name='CloseDate']")
+Stage
+(By.XPATH, "//div/button[@aria-label='Stage']")
+Save Button
+(By.XPATH, "//div[@class='footer-full-width']//button[text()='Save']")
+
+Opportunity Validation
+Name check
+(By.XPATH,"//records-record-layout-item[@field-label='Opportunity Name']//lightning-formatted-text")
+Account name:
+(By.XPATH,"//records-record-layout-item[@field-label='Account Name']//records-hoverable-link//slot//slot")
+
+Contact Creation
+**************************
+Contact dropdown
+(By.XPATH, "//one-app-nav-bar-item-root[@data-id ='Contact']/one-app-nav-bar-item-dropdown")
+New Contact
+(By.XPATH, "//span[text()='New Contact']")
+Salutation
+(By.XPATH, "//button[@name='salutation']")
+  (By.XPATH, "//div/lightning-base-combobox-item/span/span[text()='Mr.']")
+Lastname
+(By.XPATH, "//input[@name='lastName']")
+Account name search
+By.XPATH, "//input[@placeholder='Search Accounts...']")
+list of accounts
+(By.XPATH, "//ul[@role='group']/li")
+Save button
+(By.XPATH,"//runtime_platform_actions-action-renderer//button[text()='Save']")
+
+Contct check
+name
+driver.find_element(By.XPATH, "//slot[@name='outputField']/lightning-formatted-name").
+accname
+(By.XPATH,"//records-record-layout-item[@field-label='Account Name']//records-hoverable-link//slot//slot")
